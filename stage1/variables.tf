@@ -25,3 +25,11 @@ variable "github_branch" {
   type    = string
   default = "main"
 }
+
+variable "rg_name" {
+  type = string
+}
+
+variable "user_assigned_identity_name" {
+  type    = string
+}

@@ -11,5 +11,5 @@ output "AZURE_SUBSCRIPTION_ID" {
 }
 
 output "federated_subject" {
-  value = azurerm_federated_identity_credential.github.subject
+  value = azurerm_federated_identity_credential.github_environment.subject
 }

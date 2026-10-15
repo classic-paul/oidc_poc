@@ -16,12 +16,12 @@ provider "azurerm" {
 data "azurerm_client_config" "current" {}
 
 resource "azurerm_resource_group" "this" {
-  name     = "rg_oidc_demo"
+  name     = var.rg_name
   location = var.location
 }
 
 resource "azurerm_user_assigned_identity" "this" {
-  name                = "id_oidc_demo"
+  name                = var.user_assigned_identity_name
   resource_group_name = azurerm_resource_group.this.name
   location            = azurerm_resource_group.this.location
 }

@@ -15,11 +15,11 @@ provider "azurerm" {
 }
 
 data "azurerm_resource_group" "this" {
-  name = "rg_oidc_demo"
+  name = var.rg_name
 }
 
 resource "azurerm_logic_app_workflow" "this" {
-  name                = "logic-oidc-demo"
+  name                = var.logic_app_workflow_name
   location            = data.azurerm_resource_group.this.location
   resource_group_name = data.azurerm_resource_group.this.name
 }
